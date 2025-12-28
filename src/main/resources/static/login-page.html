@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="/styles/login-page.css">
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>Login</h2>
+            <label>
+                Username
+                <input type="text" id="username">
+            </label>
+
+            <label>
+                Password
+                <input type="password" id="password">
+            </label>
+
+            <div id="error" class="error-message" style="display:none;"></div>
+
+            <button onclick="login()">Login</button>
+        </div>
+        <script src="scripts/login-page.js" ></script>
+    </body>
+</html>

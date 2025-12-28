@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Computer System</title>
+        <link rel="stylesheet" href="/styles/main-page.css">
+    </head>
+    <body>
+        <div class="app">
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <div class="brand">
+                        <div class="brand-mark"></div>
+                        <div class="brand-text">
+                            <div class="brand-title">Computer System</div>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="nav">
+                    <button class="nav-item active" type="button" id="navCountries">
+                        <span>Countries</span>
+                    </button>
+
+                    <button class="nav-item" type="button" id="navFirms">
+                        <span>Firms</span>
+                    </button>
+
+                    <button class="nav-item" type="button" id="navComputers">
+                        <span>Computers</span>
+                    </button>
+                </nav>
+                <div class="sidebar-bottom">
+                    <button id="btnLogout" class="sidebar-logout" type="button" onclick="logout()">Logout</button>
+                </div>
+            </aside>
+
+            <main class="main">
+                <header class="topbar">
+                    <div class="topbar-left">
+                        <div class="page-title">Countries</div>
+                    </div>
+
+                    <div class="topbar-right">
+                        <div class="user-chip">
+                            <span id="username">username</span>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="content">
+                    <div class="content-card">
+                        <div id="viewCountries">
+                            <div class="card-header">
+                                <div>
+                                    <h3 class="card-title">Countries</h3>
+                                    <p class="card-subtitle">List of countries from database</p>
+                                </div>
+
+                                <div class="card-actions">
+                                    <button id="btnAddCountry" class="btn btn-primary" type="button">+ Add</button>
+                                </div>
+                            </div>
+
+                            <div id="countriesState" class="state-text">Loading...</div>
+
+                            <div class="table-wrap">
+                                <table class="table" id="countriesTable" style="display:none;">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th style="width: 200px; text-align:right;">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="countriesTbody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="viewFirms" style="display:none;">
+                            <div class="card-header">
+                                <div>
+                                    <h3 class="card-title">Firms</h3>
+                                    <p class="card-subtitle">List of firms from database</p>
+                                </div>
+
+                                <div class="card-actions">
+                                    <button id="btnAddFirm" class="btn btn-primary" type="button">+ Add</button>
+                                </div>
+                            </div>
+
+                            <div id="firmsState" class="state-text">Loading...</div>
+
+                            <div class="table-wrap">
+                                <table class="table" id="firmsTable" style="display:none;">
+                                    <thead>
+                                    <tr>
+                                        <th>Firm</th>
+                                        <th>Country</th>
+                                        <th style="width: 200px; text-align:right;">Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="firmsTbody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="viewComputers" style="display:none;">
+                            <div class="card-header">
+                                <div>
+                                    <h3 class="card-title">Computers</h3>
+                                    <p class="card-subtitle">List of computers from database</p>
+                                </div>
+
+                                <div class="card-actions">
+                                    <button id="btnAddComputer" class="btn btn-primary" type="button">+ Add</button>
+                                </div>
+                            </div>
+
+                            <div id="computersState" class="state-text">Loading...</div>
+
+                            <div class="table-wrap">
+                                <table class="table" id="computersTable" style="display:none;">
+                                    <thead>
+                                    <tr>
+                                        <th>Model</th>
+                                        <th>CPU</th>
+                                        <th style="width: 90px;">RAM</th>
+                                        <th style="width: 110px;">Price</th>
+                                        <th>Firm</th>
+                                        <th style="width: 200px; text-align:right;">Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="computersTbody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <script src="scripts/main-page.js"></script>
+        <script src="scripts/firms.js"></script>
+        <script src="/scripts/computers.js"></script>
+        <script src="scripts/countries.js"></script>
+    </body>
+</html>
